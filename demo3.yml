@@ -1,0 +1,237 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /root
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 138
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 36
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminal
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 817
+    content: "\e\\[root@velad-test ~]# "
+  - delay: 2026
+    content: v
+  - delay: 54
+    content: e
+  - delay: 153
+    content: l
+  - delay: 150
+    content: a
+  - delay: 164
+    content: d
+  - delay: 695
+    content: ' '
+  - delay: 525
+    content: i
+  - delay: 207
+    content: 'n'
+  - delay: 152
+    content: s
+  - delay: 116
+    content: t
+  - delay: 201
+    content: a
+  - delay: 156
+    content: l
+  - delay: 172
+    content: l
+  - delay: 294
+    content: "\r\n"
+  - delay: 54
+    content: "Preparing cluster setup script...\r\nPreparing k3s binary...\r\n"
+  - delay: 42
+    content: "Successfully place k3s binary to /usr/local/bin/k3s\r\nPreparing k3s images\r\n"
+  - delay: 4300
+    content: "Successfully prepare k3s image\r\n"
+  - delay: 30
+    content: "Setting up cluster...\r\n"
+  - delay: 5001
+    content: "[INFO]  Skipping k3s download and verify\r\n[INFO]  Skipping installation of SELinux RPM\r\n[INFO]  Creating /usr/local/bin/kubectl symlink to k3s\r\n[INFO]  Creating /usr/local/bin/crictl symlink to k3s\r\n[INFO]  Creating /usr/local/bin/ctr symlink to k3s\r\n[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh\r\n[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh\r\n[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env\r\n[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service\r\n[INFO]  systemd: Enabling k3s unit\r\nCreated symlink from /etc/systemd/system/multi-user.target.wants/k3s.service to /etc/systemd/system/k3s.service.\r\n[INFO]  systemd: Starting k3s\r\nSuccessfully setup cluster\r\nCreating symlink to /usr/local/bin/vela\r\nSuccessfully install vela CLI at:  /usr/local/bin/vela\r\n"
+  - delay: 9845
+    content: "unpacking docker.io/oamdev/cluster-gateway:v1.3.2 (sha256:9bcb7e24e9306def1a2c8f12159f8a8e4df224650762c266b9da6152b50aa4bf)...done\r\nSuccessfully load image:  /var/vela-image-cluster-gateway-3173283739.tar\r\n"
+  - delay: 2862
+    content: "unpacking docker.io/oamdev/kube-webhook-certgen:v2.3 (sha256:ba2fc0bfa97c34a43fac6633284dc7eba82aad49f613b736589d83380d070852)...done\r\nSuccessfully load image:  /var/vela-image-kube-webhook-certgen-3281587767.tar\r\n"
+  - delay: 3971
+    content: "unpacking docker.io/oamdev/vela-core:v1.3.1 (sha256:24622784687a78ae31eaffcc53f0128961bf158e367269c574a3a011ba18809c)...done\r\nSuccessfully load image:  /var/vela-image-vela-core-738115543.tar\r\n"
+  - delay: 10
+    content: "Installing vela-core Helm chart...\r\nCheck Requirements ...\r\n"
+  - delay: 7
+    content: "Installing KubeVela Core ...\r\nHelm Chart used for KubeVela control plane installation: /var/vela-core \r\n"
+  - delay: 166
+    content: "I0419 14:55:29.261879    6277 apply.go:107] \"creating object\" name=\"applicationrevisions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 84
+    content: "I0419 14:55:29.345726    6277 apply.go:107] \"creating object\" name=\"applications.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 80
+    content: "I0419 14:55:29.425596    6277 apply.go:107] \"creating object\" name=\"componentdefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 43
+    content: "I0419 14:55:29.468535    6277 apply.go:107] \"creating object\" name=\"definitionrevisions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 31
+    content: "I0419 14:55:29.500279    6277 apply.go:107] \"creating object\" name=\"envbindings.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 23
+    content: "I0419 14:55:29.523100    6277 apply.go:107] \"creating object\" name=\"healthscopes.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 22
+    content: "I0419 14:55:29.544520    6277 apply.go:107] \"creating object\" name=\"manualscalertraits.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 11
+    content: "I0419 14:55:29.555935    6277 apply.go:107] \"creating object\" name=\"policies.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 20
+    content: "I0419 14:55:29.575831    6277 apply.go:107] \"creating object\" name=\"policydefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 81
+    content: "I0419 14:55:29.656547    6277 apply.go:107] \"creating object\" name=\"resourcetrackers.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 21
+    content: "I0419 14:55:29.677717    6277 apply.go:107] \"creating object\" name=\"scopedefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 21
+    content: "I0419 14:55:29.698119    6277 apply.go:107] \"creating object\" name=\"traitdefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 17
+    content: "I0419 14:55:29.715426    6277 apply.go:107] \"creating object\" name=\"workflows.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 14
+    content: "I0419 14:55:29.730039    6277 apply.go:107] \"creating object\" name=\"workflowstepdefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 23
+    content: "I0419 14:55:29.753227    6277 apply.go:107] \"creating object\" name=\"workloaddefinitions.core.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 51
+    content: "I0419 14:55:29.804381    6277 apply.go:107] \"creating object\" name=\"rollouts.standard.oam.dev\" resource=\"apiextensions.k8s.io/v1, Kind=CustomResourceDefinition\"\r\n"
+  - delay: 45
+    content: "Start upgrading Helm Chart kubevela in namespace vela-system\r\n"
+  - delay: 71500
+    content: "\r\e[K\e[32m⠋\e[0m\e[1;32m Waiting KubeVela control plane running ...\e[0m "
+  - delay: 6
+    content: "\e[?25h\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\r\e[K\r\nKubeVela control plane has been successfully set up on your cluster.\r\nIf you want to enable dashboard, please run \"vela addon enable velaux\"\r\n\r\nKeep the token below in case of restarting the control plane\r\nK101d99dfe5c9b397e710f74f118831b121e9cfee518755b9f88306e4e30e75a23f::server:61f92608d3a3f00f2af2ca63784bea05\r\n\r\nSuccessfully install KubeVela control plane! Try: vela components\r\n"
+  - delay: 52
+    content: "\e\\[root@velad-test ~]# "
+  - delay: 195055
+    content: v
+  - delay: 59
+    content: e
+  - delay: 393
+    content: l
+  - delay: 214
+    content: a
+  - delay: 564
+    content: ' '
+  - delay: 258
+    content: c
+  - delay: 179
+    content: o
+  - delay: 245
+    content: m
+  - delay: 206
+    content: p
+  - delay: 245
+    content: o
+  - delay: 254
+    content: 'n'
+  - delay: 154
+    content: e
+  - delay: 77
+    content: 'n'
+  - delay: 128
+    content: t
+  - delay: 902
+    content: s
+  - delay: 250
+    content: "\r\n"
+  - delay: 198
+    content: "NAME                 \tDEFINITION              \r\nref-objects          \tautodetects.core.oam.dev\r\ntask                 \tjobs.batch              \r\nraw                  \tautodetects.core.oam.dev\r\nworker               \tdeployments.apps        \r\nconfig-image-registry\tautodetects.core.oam.dev\r\nk8s-objects          \tautodetects.core.oam.dev\r\ncron-task            \tcronjobs.batch          \r\nwebservice           \tdeployments.apps        \r\n\ekroot@velad-test:~\e\\[root@velad-test ~]# "
