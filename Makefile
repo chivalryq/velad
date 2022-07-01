@@ -8,20 +8,18 @@ LDFLAGS= "-X github.com/oam-dev/velad/version.VelaUXVersion=${VELAUX_VERSION} -X
 OS ?= linux
 ARCH ?= amd64
 
-echo:
-	@echo ${LDFLAGS}
 .DEFAULT_GOAL := linux-amd64
 linux-amd64 linux-arm64: download_vela_images_addons pack_vela_chart download_k3s_bin_script download_k3s_images
 	GOOS=${OS} GOARCH=${ARCH} \
 	go build -o bin/velad-${OS}-${ARCH} \
-	-ldflags=${LDFLAGS} \
+	-ldflags="${LDFLAGS}" \
 	github.com/oam-dev/velad/cmd/velad
 
 
 darwin-amd64 darwin-arm64 windows-amd64: download_vela_images_addons download_k3d pack_vela_chart download_k3s_images
 	GOOS=${OS} GOARCH=${ARCH} \
 	go build -o bin/velad-${OS}-${ARCH} \
-	-ldflags=${LDFLAGS} \
+	-ldflags="${LDFLAGS}" \
 	github.com/oam-dev/velad/cmd/velad
 
 download_vela_images_addons:

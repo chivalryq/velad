@@ -72,7 +72,7 @@ func (l K3sHandler) SetKubeconfig() error {
 // LoadImage load imageTar to k3s cluster
 func (l K3sHandler) LoadImage(imageTar string) error {
 	// #nosec
-	importCmd := exec.Command("k3s", "ctr", "images", "import", imageTar)
+	importCmd := exec.Command("k3s", "ctr", "images", "import", "--all-platforms", imageTar)
 	output, err := importCmd.CombinedOutput()
 	utils.InfoBytes(output)
 	if err != nil {
